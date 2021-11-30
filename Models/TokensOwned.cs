@@ -15,5 +15,6 @@ namespace BscTokenSniper.Models
         public int Decimals { get; set; }
         public bool HoneypotCheck { get; set; }
         public bool FailedSell { get; set; }
+        public bool TryiedSell { get; set; }
     }
 }

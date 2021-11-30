@@ -162,7 +162,7 @@ namespace BscTokenSniper
             var symbol = await _rugChecker.GetSymbol(pair);
             pair.Symbol = symbol;
 
-            var addressWhitelisted = _sniperConfig.WhitelistedTokens.Any(t => t.Equals(otherPairAddress));
+            var addressWhitelisted = _sniperConfig.WhitelistedTokens.Any(t => t.Equals(otherPairAddress, StringComparison.OrdinalIgnoreCase));
             if(_sniperConfig.OnlyBuyWhitelist && !addressWhitelisted)
             {
                 Log.Logger.Warning("Address is not in the whitelist blocked {0}", otherPairAddress);

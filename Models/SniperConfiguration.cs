@@ -1,6 +1,4 @@
-﻿using System;
-using System.Numerics;
-
+﻿
 namespace BscTokenSniper.Models
 {
     public class SniperConfiguration
@@ -26,7 +24,7 @@ namespace BscTokenSniper.Models
         public decimal MinimumPercentageOfTokenInLiquidityPool { get; set; }
         public bool HoneypotCheck { get; set; }
         public double HoneypotCheckAmount { get; set; }
-        public double SellSlippage { get; set; }
+        public double SellSlippage { get; set; } = 0.5;
         public bool RugdocCheckEnabled { get; set; }
         public string[] DeadWallets { get; set; }
         public string[] WhitelistedTokens { get; set; }

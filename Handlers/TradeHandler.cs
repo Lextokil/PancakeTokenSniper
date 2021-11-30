@@ -8,6 +8,7 @@ using Nethereum.Web3.Accounts;
 using Serilog;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -93,7 +94,8 @@ namespace BscTokenSniper.Handlers
             }
             catch (Exception e)
             {
-                Log.Logger.Error("Error buying", e);
+                Log.Logger.Error(e,"Error buying");
+                Debug.WriteLine(e.ToString());
                 return false;
             }
         }
